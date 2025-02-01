@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Personal Web</title>
+    <!-- Bootstraps Icon -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/bb1e6fd391.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: "Inter", serif;
+        text-align: justify;
+      }
+      
+      .row-1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        /* background-color: gray; */
+      }
+
+      .col-1 {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+      }
+
+      .col-2 {
+        width: 30%;
+      }
+
+      /* .description h1 {
+        font-size: ;
+      } */
+
+      .description p {
+        font-size: 16px;
+      }
+
+      .contact {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+      }
+
+      .contact-button {
+        margin-top: 20px;
+        width: 16%;
+        height: 40px;
+        border-radius: 25px;
+        background-color: black;
+        font-size: 16px;
+        color: white;
+        /* padding: 5px 15px; */
+        transition: background-color 0.15s, color 0.15s;
+      }
+
+      .contact-button:hover {
+        cursor: pointer;
+        background-color: rgb(198, 193, 193);
+        color: black;
+        border-width: 2px;
+      }
+
+      .contact-button:active {
+        opacity: 0.7;
+      }
+
+      .contact-cv {
+        display: flex;
+        flex-direction: row;
+        width: 20%;
+        margin-left: 10px;
+        text-align: center;
+        padding-top: 26px;
+        font-size: 18px;
+      }
+
+      .glyphicon {
+        margin-left: 10px;
+        color: black;
+        transition: opacity 0.15s;
+      }
+      
+      .glyphicon:hover {
+        text-decoration: none;
+        opacity: 0.5;
+      }
+
+      .glyphicon:active {
+        color: rgb(134, 130, 130);
+      }
+
+      .social-media-buttons {
+        display: flex;
+        align-items: center;
+      }
+
+      .social-media-button {
+        margin-top: 40px;
+        margin-right: 20px;
+        background-color: black;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 3px;
+        text-decoration: none;
+        color: white;
+        padding: 5px 10px 5px 10px;
+        font-size: 25px;
+        transition: background-color 0.15s;
+      }
+
+      .social-media-button:hover {
+        background-color: rgb(134, 130, 130);
+        color: black;
+        border-width: 2px;
+      }
+      
+      .social-media-button:active {
+        opacity: 0.7;
+      }
+      
+      /* card */
+      .card {
+        margin-top: 80px;
+        margin-left: 80px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .img-card {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 5px 5px 0 0;
+      }
+
+      .container-name {
+        margin: auto;
+        width: 60%;
+        text-align: center;
+      }
+
+      .name {
+        font-size: 24px;
+        font-weight: 900;
+        padding: 0;
+        margin-bottom: 0;
+      }
+
+      .job-title {
+        margin-top: 10px;
+        padding-bottom: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="row-1">
+      <!-- Description, contact, social media -->
+      <div class="col-1">
+        <!-- Description -->
+        <div class="description">
+          <h1>
+            <b>Hi Welcome to my hut</b>
+          </h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis est qui veniam reiciendis repellendus adipisci numquam optio voluptates nihil officia enim neque illo, odit cumque, distinctio alias explicabo ducimus voluptas aperiam inventore temporibus! Sit enim dolor deserunt placeat minima quos qui consequuntur nam quidem labore veniam, voluptates omnis unde architecto modi porro quisquam laudantium quam sequi. Minima alias, aut sapiente reiciendis a nulla temporibus ullam recusandae veritatis explicabo similique debitis possimus? In laboriosam cumque est iste voluptate recusandae odio pariatur?</p>
+        </div>
+        <!-- Contact -->
+        <div class="contact">
+          <button class="contact-button">contact</button>
+          <div class="contact-cv">
+            <div>
+              download CV
+            </div>
+            <div>
+              <a href="#" class="glyphicon">
+                &#xe025;
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Social Media -->
+        <div class="social-media-buttons">
+          <a href="#" class="social-media-button"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-media-button"><i class='fab fa-instagram'></i></a>
+          <a href="#" class="social-media-button"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="social-media-button"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="col-2">
+      <!-- Card -->
+        <div class="card">
+          <img src="image/IMG-20250122-WA0006.jpg" alt="" class="img-card">
+            <div class="container-name">
+              <h2 class="name">Achmad Naufal Ilyasa</h2>
+              <p class="job-title">Fullstack Developer</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
