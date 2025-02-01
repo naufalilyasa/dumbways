@@ -9,4 +9,6 @@ function submitContactForm(event) {
   let emailTo = "naufal.ilyasa7@gmail.com";
   let a = document.createElement("a");
   a.href = `mailto:${emailTo}?subject:${subject}&body${`Halo nama saya, ${name}, silahkan hubungi saya di ${email}, Skill saya adalah ${skill}. Berikut yang ingin saya sampaikan: ${massege}.`}`;
+
+  a.click();
 }
