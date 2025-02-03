@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: rgb(198, 198, 198);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  gap: 40px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar-link {
+  list-style: none;
+  color: black;
+  font-weight: 800;
+  display: inline-block;
+}
+
+.navbar-link > a {
+  text-decoration: none;
+}
+
+.navbar-link > a:link {
+  color: black;
+}
+
+.navbar-link > a:active {
+  color: black;
+}
+
+.navbar-link > a:visited {
+  color: black;
+}
+
+.navbar-logo {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.nav-contact {
+  margin-right: 40px;
+  border-radius: 10px;
+  align-items: center;
+  color: white;
+  background-color: rgb(48, 115, 209);
+  padding: 10px 20px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-card {
+  margin-top: 50px;
+  width: 30%;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  padding: 18px;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.img-card {
+  border-radius: 15px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 -50px;
+}
+
+.card-name {
+  margin-top: 10px;
+  width: 100%;
+  text-align: left;
+  color: rgb(48, 115, 209);
+  font-weight: 900;
+}
+
+.card-description {
+  margin: 10px 0;
+  font-size: 14px;
+  color: rgb(99, 98, 98);
+}
+
+table,
+th,
+td {
+  border: 2px solid;
+  border-collapse: separate;
+  border-spacing: 1px;
+}
+
+th {
+  text-align: center;
+}
+
+th,
+td {
+  padding: 2px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 15px;
+  width: 600px;
+  margin-top: 50px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* margin-bottom: 15px; */
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.form-field input,
+select,
+textarea {
+  border-color: rgb(183, 179, 179);
+  border-style: solid;
+  border-width: 4px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: rgb(243, 241, 241);
+}
+
+.contact-form-button {
+  border-radius: 5px;
+  background-color: rgb(48, 115, 209);
+  border-style: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+/* Blog Form */
+.create-blog-form {
+  width: 500px;
+  margin: 30px auto;
+}
+
+.create-blog-form h1 {
+  text-align: center;
+}
+
+.button-container {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.create-blog-form button {
+  font-size: 16px;
+  background-color: rgb(48, 115, 209);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Blog List */
+.blog-list {
+  width: 90%;
+  margin: 30px auto;
+}
+
+.blog-item {
+  height: 250px;
+  padding: 15px;
+  border: 1px solid #aaa;
+  border-radius: 15px;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.blog-item-img {
+}
+
+.blog-item-img img {
+  height: 100%;
+}
+
+.blog-item-text {
+  flex: 1;
+}
+
+.blog-item-buttons {
+  text-align: right;
+}
+
+.blog-edit-button {
+  font-size: 16px;
+  font-family: "Poppins", serif;
+  background-color: lightgrey;
+  color: black;
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.blog-post-button {
+  font-size: 16px;
+  font-family: "Poppins", serif;
+  background-color: rgb(48, 115, 209);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Blog detail */
+.blog-detail {
+  width: 60%;
+  margin: 40px auto;
+}
+
+.blog-detail img {
+  width: 100%;
+}

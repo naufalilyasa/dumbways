@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Personal Web</title>
+    <link rel="icon" href="assets/user-profile.png" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul class="navbar-links">
+        <img src="assets/img/user-profile.png" alt="" class="navbar-logo" />
+        <li class="navbar-link">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="navbar-link">
+          <a href="#">Blog</a>
+        </li>
+      </ul>
+      <a href="contact.html" class="navbar-links nav-contact">Contact Me</a>
+    </nav>
+
+    <!-- Create Blog -->
+    <form action="" class="create-blog-form" onsubmit="addBlog(event)">
+      <h1>Create Blog</h1>
+
+      <div class="form-field">
+        <label for="title">Title</label>
+        <input type="text" name="" id="title" />
+      </div>
+      <div class="form-field">
+        <label for="content">Content</label>
+        <input type="text" name="" id="content" />
+      </div>
+      <div class="form-field">
+        <label for="image">Upload Image</label>
+        <input type="file" name="" id="image" />
+      </div>
+      <div class="button-container">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+
+    <hr style="width: 90%; margin: 0 auto" />
+
+    <!-- Blog List -->
+    <section id="blogList" class="blog-list">
+      <article class="blog-item">
+        <div class="blog-item-img">
+          <img src="assets/img/class.webp" alt="in the classroom" />
+        </div>
+        <div class="blog-item-text">
+          <div class="blog-item-buttons">
+            <button class="blog-edit-button">Edit Blog</button>
+            <button class="blog-post-button">Post Blog</button>
+          </div>
+          <h1>Pasar Coding di Indonesia</h1>
+          <p>30 Jan 2025 11:22 WIB | Alex Josua</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic quas
+            temporibus quaerat! Rerum vero atque perspiciatis quas corporis hic
+            consequuntur incidunt unde ipsam iste nostrum voluptates deleniti
+            laboriosam dicta et tenetur, tempora quaerat facere consequatur fuga
+            error sequi nesciunt modi reiciendis. Perspiciatis eligendi fugiat
+            necessitatibus ad ab aut quo reprehenderit.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <script src="assets/scripts/blog.js"></script>
+  </body>
+</html>
