@@ -1,0 +1,11 @@
+.testimonial-star-button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.testimonial-star-button button {
+  font-size: 16px;
+  text-align: center;
+  background-color: rgb(48, 115, 209);
+}
