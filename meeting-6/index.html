@@ -11,19 +11,37 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <ul class="navbar-links">
-        <img src="assets/img/user-profile.png" alt="" class="navbar-logo" />
-        <li class="navbar-link">
-          <a href="#" style="color: rgb(48, 115, 209); font-weight: 900"
-            >Home</a
-          >
-        </li>
-        <li class="navbar-link">
-          <a href="blog.html">Blog</a>
-        </li>
-      </ul>
-      <a href="contact.html" class="navbar-links nav-contact">Contact Me</a>
+      <div class="main-menu">
+        <ul class="navbar-links">
+          <img src="assets/img/user-profile.png" alt="" class="navbar-logo" />
+          <li class="navbar-link">
+            <a
+              href="index.html"
+              style="color: rgb(48, 115, 209); font-weight: 900"
+              >Home</a
+            >
+          </li>
+          <li class="navbar-link">
+            <a href="blog.html">Blog</a>
+          </li>
+        </ul>
+        <a href="contact.html" class="navbar-links nav-contact">Contact Me</a>
+      </div>
+      <div class="mobile-menu">
+        <img
+          src="assets/img/user-profile.png"
+          alt=""
+          class="mobile-navbar-logo"
+        />
+        <button id="hamburgerButton" class="hamburger-button">☰</button>
+      </div>
     </nav>
+
+    <div id="mobileMenuList" class="mobile-menu-list">
+      <a href="index.html" class="menu-active">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Me</a>
+    </div>
 
     <!-- Profile Card -->
     <main class="content-container">
@@ -105,5 +123,7 @@
         </div>
       </section>
     </main>
+
+    <script src="assets/scripts/navbar.js"></script>
   </body>
 </html>

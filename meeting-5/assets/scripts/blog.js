@@ -28,7 +28,7 @@ function renderBlog() {
   blogListElement.innerHTML = firstBlogContent();
 
   for (let index = 0; index < blogs.length; index++) {
-    console.log(blogs[index]);
+    // console.log(blogs[index]);
 
     blogListElement.innerHTML += `
             <article class="blog-item">

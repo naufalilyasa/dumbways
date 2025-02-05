@@ -11,9 +11,14 @@
 Navbar 
 
 */
+
 .navbar {
   background-color: rgb(198, 198, 198);
+  /* padding: 2px 0 2px 40px; */
   width: 100%;
+}
+
+.main-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,16 +27,18 @@ Navbar
 .navbar-links {
   display: flex;
   padding: 20px;
+  margin-left: 40px;
   align-items: center;
   gap: 40px;
   text-decoration: none;
   font-size: 18px;
+  /* margin: 0 auto; */
 }
 
 .navbar-link {
   list-style: none;
   color: black;
-  font-weight: 800;
+  font-weight: 700;
   display: inline-block;
 }
 
@@ -64,6 +71,11 @@ Navbar
   color: white;
   background-color: rgb(48, 115, 209);
   padding: 10px 20px;
+  font-size: 16px;
+}
+
+.mobile-menu-list {
+  display: none;
 }
 
 /* 
@@ -73,10 +85,15 @@ Profile Card
 */
 .content-container {
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
-  padding: 50px;
+  /* align-items: center;
+  justify-content: center; */
+  margin: 50px auto;
+  width: 90%;
   gap: 50px;
+}
+
+.mobile-menu {
+  display: none;
 }
 
 #profile-section {
@@ -242,6 +259,16 @@ textarea {
 Blog Form 
 
 */
+.blog-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 20px;
+}
+
 .create-blog-form {
   width: 500px;
   margin: 30px auto;
@@ -272,21 +299,29 @@ Blog List
 
 */
 .blog-list {
-  width: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   margin: 30px auto;
+  gap: 30px;
 }
 
 .blog-item {
+  /* height: auto; */
   height: 250px;
   padding: 15px;
-  border: 1px solid #aaa;
-  border-radius: 15px;
   display: flex;
   gap: 15px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  border: 1px solid #aaa;
+  border-radius: 15px;
 }
 
 .blog-item-img {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .blog-item-img img {
@@ -294,7 +329,19 @@ Blog List
 }
 
 .blog-item-text {
-  flex: 1;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.blog-item-text h1,
+p {
+  margin: 0;
+}
+
+.blog-item-text-content h1 {
+  font-size: 24px;
 }
 
 .blog-item-buttons {
@@ -323,7 +370,18 @@ Blog List
   cursor: pointer;
 }
 
-/* Blog detail */
+.blog-item-relative-time {
+  color: #aaa;
+  font-size: 14px;
+  text-align: right;
+}
+
+/* 
+
+Blog detail 
+
+*/
+
 .blog-detail {
   width: 60%;
   margin: 40px auto;
@@ -333,7 +391,74 @@ Blog List
   width: 100%;
 }
 
+/* 
+
+responsive
+
+*/
+
 @media screen and (max-width: 768px) {
+  /* 
+  
+  Responsive Navbar
+  
+  */
+
+  .main-menu {
+    display: none;
+  }
+
+  .menu-active {
+    background-color: rgb(48, 115, 209) !important;
+    color: white;
+  }
+
+  .mobile-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile-navbar-logo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+  }
+
+  .hamburger-button {
+    text-align: right;
+    font-size: 36px;
+    margin-right: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+
+  .mobile-menu-list {
+    display: none;
+  }
+
+  .mobile-menu-list a {
+    display: block;
+    text-decoration: none;
+    border: 1px solid white;
+    background-color: rgb(198, 198, 198);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .show {
+    display: block;
+  }
+
+  /* 
+  
+  Responsive main content
+
+  */
+
   .content-container {
     display: flex;
     flex-direction: column;
@@ -341,5 +466,41 @@ Blog List
 
   #technologies {
     flex-direction: column;
+  }
+
+  /* 
+  
+  Responsive Blog Page
+
+  */
+  .create-blog-form {
+    width: 90%;
+  }
+
+  .blog-item {
+    /* display: flex; */
+    flex-direction: column;
+    height: auto;
+    /* justify-content: center;
+    align-items: center; */
+    /* margin: 0 auto; */
+  }
+
+  .blog-item-img img {
+    height: 200px;
+    width: 100%;
+  }
+
+  .blog-item-buttons {
+    text-align: left;
+  }
+
+  /* 
+  
+  Responsive contact page
+
+  */
+  .contact-form {
+    width: 90%;
   }
 }

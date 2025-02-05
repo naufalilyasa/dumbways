@@ -1,23 +1,43 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Contact Me</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Web</title>
     <link rel="icon" href="assets/user-profile.png" />
 
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar">
-      <ul class="navbar-links">
-        <img src="assets/img/user-profile.png" alt="" class="navbar-logo" />
-        <li class="navbar-link">
-          <a href="index.html">Home</a>
-        </li>
-        <li class="navbar-link">
-          <a href="#">Blog</a>
-        </li>
-      </ul>
-      <a href="contact.html" class="navbar-links nav-contact">Contact Me</a>
+      <div class="main-menu">
+        <ul class="navbar-links">
+          <img src="assets/img/user-profile.png" alt="" class="navbar-logo" />
+          <li class="navbar-link">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="navbar-link">
+            <a href="blog.html">Blog</a>
+          </li>
+        </ul>
+        <a href="contact.html" class="navbar-links nav-contact">Contact Me</a>
+      </div>
+      <div class="mobile-menu">
+        <img
+          src="assets/img/user-profile.png"
+          alt=""
+          class="mobile-navbar-logo"
+        />
+        <button id="hamburgerButton" class="hamburger-button">☰</button>
+      </div>
     </nav>
+
+    <div id="mobileMenuList" class="mobile-menu-list">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="menu-active">Contact Me</a>
+    </div>
 
     <form action="" class="contact-form" onsubmit="submitContactForm(event)">
       <h1>Contact Me!</h1>
