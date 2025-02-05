@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+/*
+
+Navbar 
+
+*/
 .navbar {
   background-color: rgb(198, 198, 198);
   width: 100%;
@@ -61,26 +66,46 @@
   padding: 10px 20px;
 }
 
+/* 
+
+Profile Card
+
+*/
 .content-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
+  padding: 50px;
+  gap: 50px;
+}
+
+#profile-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .profile-card {
-  margin-top: 50px;
-  width: 30%;
+  /* margin-top: 50px; */
   border-radius: 15px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
+  margin: 0 auto;
+  max-width: 400px;
+  justify-content: center;
+  text-align: center;
   padding: 18px;
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .img-card {
   border-radius: 15px;
+  height: auto;
   width: 100%;
+  /* max-width: 300px; */
   object-fit: cover;
-  object-position: 0 -50px;
+  justify-content: center;
+  /* transform: rotate(90deg); */
+  /* object-position: 0 -50px; */
 }
 
 .card-name {
@@ -92,27 +117,79 @@
 }
 
 .card-description {
+  text-align: justify;
   margin: 10px 0;
   font-size: 14px;
   color: rgb(99, 98, 98);
 }
 
-table,
-th,
+.card-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.card-table th,
 td {
   border: 2px solid;
-  border-collapse: separate;
-  border-spacing: 1px;
-}
-
-th {
-  text-align: center;
-}
-
-th,
-td {
   padding: 2px;
+  text-align: center;
+  /* border-collapse: collapse; */
+  /* border-spacing: 1px; */
 }
+
+/* 
+
+Introduction 
+
+*/
+
+#introduction {
+  display: flex;
+  flex: 2.5;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#what-i-do h1 {
+  /* font-size: 36px; */
+  margin-bottom: 20px;
+}
+
+#technologies {
+  display: flex;
+  gap: 20px;
+}
+
+#frontend {
+  flex: 1;
+}
+
+#version-control {
+  flex: 1;
+}
+
+#automated-deployment {
+  flex: 1;
+}
+
+#socials a {
+  text-decoration: none;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+#socials h1 {
+  margin-bottom: 20px;
+}
+
+#socials a img {
+  width: 50px;
+}
+
+/* 
+
+Contact Form
+
+*/
 
 .contact-form {
   display: flex;
@@ -160,7 +237,11 @@ textarea {
   margin-bottom: 40px;
 }
 
-/* Blog Form */
+/* 
+
+Blog Form 
+
+*/
 .create-blog-form {
   width: 500px;
   margin: 30px auto;
@@ -185,7 +266,11 @@ textarea {
   cursor: pointer;
 }
 
-/* Blog List */
+/*
+
+Blog List 
+
+*/
 .blog-list {
   width: 90%;
   margin: 30px auto;
@@ -246,4 +331,15 @@ textarea {
 
 .blog-detail img {
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .content-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #technologies {
+    flex-direction: column;
+  }
 }
