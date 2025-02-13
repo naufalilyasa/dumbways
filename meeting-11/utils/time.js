@@ -1,4 +1,5 @@
 function formatDateToWIB(date) {
+  date = new Date(date);
   let monthList = [
     "Jan",
     "Feb",
@@ -23,14 +24,16 @@ function formatDateToWIB(date) {
   let formattedDate = `${
     day + " " + month + " " + year + " " + hours + ":" + minutes + " WIB "
   }`;
-  console.log(formattedDate);
+  // console.log(formattedDate);
 
   return formattedDate;
 }
 
 function getRelativeTime(postTime) {
+  postTime = new Date(postTime);
   let now = new Date();
   let diffTime = now - postTime;
+
   let diffInSeconds = Math.floor(diffTime / 1000);
   if (diffInSeconds < 60) {
     return `${diffInSeconds} seconds ago`;
@@ -52,7 +55,12 @@ function getRelativeTime(postTime) {
   }
 
   let diffInMonth = Math.floor(diffInDays / 30);
-  return `${diffInMonth} month${diffInMonth === 1 ? "" : "s"} ago`;
+  if (diffInMonth < 12) {
+    `${diffInMonth} month${diffInMonth === 1 ? "" : "s"} ago`;
+  }
+
+  let diffInYears = Math.floor(diffInMonth / 12);
+  return `${diffInYears} years ago`;
 }
 
 module.exports = {

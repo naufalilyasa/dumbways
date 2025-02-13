@@ -1,9 +1,25 @@
 const express = require("express");
+const hbs = require("hbs");
+const methodOverride = require("method-override");
+
 const app = express();
 const port = 3000;
-const hbs = require("hbs");
-const path = require("path");
+
+const {
+  renderHomePage,
+  renderContactPage,
+  renderBlogPage,
+  renderBlogDetailPage,
+  renderCreateBlogPage,
+  renderEditBlogPage,
+  createBlog,
+  deleteBlog,
+  updateBlog,
+  renderTestimonialsPage,
+} = require("./controllers/controller-v1.js");
 const { formatDateToWIB, getRelativeTime } = require("./utils/time.js");
+
+const path = require("path");
 
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "./views"));
@@ -11,7 +27,8 @@ app.set("views", path.join(__dirname, "./views"));
 
 app.use(express.static("assets"));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride("_method"));
 
 hbs.registerPartials(__dirname + "/views/partials", function (err) {});
 hbs.registerHelper("equal", function (a, b) {
@@ -20,58 +37,42 @@ hbs.registerHelper("equal", function (a, b) {
 hbs.registerHelper("formatDateToWIB", formatDateToWIB);
 hbs.registerHelper("getRelativeTime", getRelativeTime);
 
-app.get("/", (req, res) => {
-  res.render("index");
-});
+// HOME PAGE
+app.get("/", renderHomePage);
 
-app.get("/contact", (req, res) => {
-  res.render("contact");
-});
+// CONTACT PAGE
+app.get("/contact", renderContactPage);
 
-app.get("/blog-create", (req, res) => {
-  res.render("blog-create");
-});
+// BLOG-LIST PAGE
+app.get("/blogs", renderBlogPage);
 
-app.post("/blog-create", (req, res) => {
-  const { title, content } = req.body;
-  let blogs = [];
-  let newBlog = {
-    title: title,
-    content: content,
-    image: "https://picsum.photos/200/300",
-    author: "Naufal",
-    postedAt: new Date(),
-  };
+// BLOG-DETAIL PAGE
+app.get("/blog-detail/:id", renderBlogDetailPage);
 
-  blogs.push(newBlog);
+// BLOG-CREATE PAGE
+app.get("/blog-create", renderCreateBlogPage);
 
-  res.redirect("/blog");
-});
-// console.log("test");
+// BLOG-EDIT PAGE
+app.get("/blog-edit/:id", renderEditBlogPage);
 
-app.get("/blog", (req, res) => {
-  res.render("blog-list");
-});
+// CREATE BLOG
+app.post("/blog-create", createBlog);
 
-app.get("/blog-detail", (req, res) => {
-  res.render("blog-detail");
-});
+// EDIT BLOG
+app.post("/blog-edit/:id", updateBlog);
 
-app.get("/testimonials", (req, res) => {
-  res.render("testimonials");
-});
+// DELETE BLOG
+app.delete("/blog/:id", deleteBlog);
 
-app.get("/about/:id", (req, res) => {
-  const id = req.params.id;
-  res.send(`Halaman ini pada id: ${id}`);
-});
+// TESTIMONIALS PAGE
+app.get("/testimonials", renderTestimonialsPage);
 
-app.get("/blog", (req, res) => {
-  // res.send("Blog Page");
+// app.get("/blog", (req, res) => {
+//   // res.send("Blog Page");
 
-  const { title, author, year } = req.query;
-  res.send(`Blog berjudul ${title} ditulis oleh ${author} pada tahun ${year}`);
-});
+//   const { title, author, year } = req.query;
+//   res.send(`Blog berjudul ${title} ditulis oleh ${author} pada tahun ${year}`);
+// });
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
