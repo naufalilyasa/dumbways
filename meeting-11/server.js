@@ -8,15 +8,24 @@ const port = 3000;
 const {
   renderHomePage,
   renderContactPage,
+  // renderBlogPage,
+  // renderBlogDetailPage,
+  renderCreateBlogPage,
+  // renderEditBlogPage,
+  // createBlog,
+  // deleteBlog,
+  // updateBlog,
+  renderTestimonialsPage,
+  renderNotFoundPage,
+} = require("./controllers/controller-v1.js");
+const {
   renderBlogPage,
   renderBlogDetailPage,
-  renderCreateBlogPage,
   renderEditBlogPage,
-  createBlog,
   deleteBlog,
   updateBlog,
-  renderTestimonialsPage,
-} = require("./controllers/controller-v1.js");
+  createBlog,
+} = require("./controllers/controller-v2.js");
 const { formatDateToWIB, getRelativeTime } = require("./utils/time.js");
 
 const path = require("path");
@@ -66,6 +75,9 @@ app.delete("/blog/:id", deleteBlog);
 
 // TESTIMONIALS PAGE
 app.get("/testimonials", renderTestimonialsPage);
+
+// 404 PAGE
+app.get("*", renderNotFoundPage);
 
 // app.get("/blog", (req, res) => {
 //   // res.send("Blog Page");
